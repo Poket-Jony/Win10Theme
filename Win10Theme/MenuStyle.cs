@@ -37,12 +37,18 @@ namespace Win10Theme
             pnlStatusBar.Controls.Add(content);
         }
 
-        public void AddMenuItem(Image icon, string name, Control content)
+        public MenuItem AddMenuItem(Image icon, string name, Control content)
         {
             MenuItem item = new MenuItem(icon, name, content);
             item.Dock = DockStyle.Top;
             item.Click += Item_Click;
             flowPnlMenuItems.Controls.Add(item);
+            return item;
+        }
+
+        public void SetItemClicked(MenuItem item)
+        {
+            Item_Click(item, null);
         }
 
         private void Item_Click(object sender, EventArgs e)
@@ -56,8 +62,8 @@ namespace Win10Theme
             MenuItem item = (MenuItem)sender;
             if (item.Content != null)
             {
-                item.Content.Dock = DockStyle.Fill;
                 pnlContent.Controls.Add(item.Content);
+                item.Content.Dock = DockStyle.Fill;
             }
             item.IsSelected = true;
         }
