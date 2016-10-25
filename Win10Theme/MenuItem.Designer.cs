@@ -41,10 +41,10 @@
             // 
             this.picBoxIcon.BackColor = System.Drawing.Color.Transparent;
             this.picBoxIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBoxIcon.Location = new System.Drawing.Point(0, 10);
+            this.picBoxIcon.Location = new System.Drawing.Point(5, 10);
             this.picBoxIcon.Margin = new System.Windows.Forms.Padding(0);
             this.picBoxIcon.Name = "picBoxIcon";
-            this.picBoxIcon.Size = new System.Drawing.Size(28, 18);
+            this.picBoxIcon.Size = new System.Drawing.Size(23, 18);
             this.picBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxIcon.TabIndex = 0;
             this.picBoxIcon.TabStop = false;
@@ -84,7 +84,7 @@
             this.pnlIconPlacer.Location = new System.Drawing.Point(0, 10);
             this.pnlIconPlacer.Margin = new System.Windows.Forms.Padding(0);
             this.pnlIconPlacer.Name = "pnlIconPlacer";
-            this.pnlIconPlacer.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
+            this.pnlIconPlacer.Padding = new System.Windows.Forms.Padding(5, 10, 10, 10);
             this.pnlIconPlacer.Size = new System.Drawing.Size(38, 38);
             this.pnlIconPlacer.TabIndex = 3;
             this.pnlIconPlacer.Click += new System.EventHandler(this.pnlIconPlacer_Click);
