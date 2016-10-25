@@ -42,6 +42,7 @@
             this.picBoxIcon.BackColor = System.Drawing.Color.Transparent;
             this.picBoxIcon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBoxIcon.Location = new System.Drawing.Point(0, 10);
+            this.picBoxIcon.Margin = new System.Windows.Forms.Padding(0);
             this.picBoxIcon.Name = "picBoxIcon";
             this.picBoxIcon.Size = new System.Drawing.Size(28, 18);
             this.picBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -81,6 +82,7 @@
             this.pnlIconPlacer.Controls.Add(this.picBoxIcon);
             this.pnlIconPlacer.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlIconPlacer.Location = new System.Drawing.Point(0, 10);
+            this.pnlIconPlacer.Margin = new System.Windows.Forms.Padding(0);
             this.pnlIconPlacer.Name = "pnlIconPlacer";
             this.pnlIconPlacer.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
             this.pnlIconPlacer.Size = new System.Drawing.Size(38, 38);
@@ -94,6 +96,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlLabelPlacer);
             this.Controls.Add(this.pnlIconPlacer);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "MenuItem";
             this.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.Size = new System.Drawing.Size(206, 58);

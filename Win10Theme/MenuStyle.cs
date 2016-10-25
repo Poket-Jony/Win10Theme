@@ -12,24 +12,11 @@ namespace Win10Theme
 {
     public partial class MenuStyle: UserControl
     {
-        private bool pnlLeftStatus = false;
+        private bool pnlLeftStatus = true;
 
         public MenuStyle()
         {
             InitializeComponent();
-        }
-
-        private void picBoxMenuButton_Click(object sender, EventArgs e)
-        {
-            if(pnlLeftStatus)
-            {
-                pnlLeft.Width = pnlLeft.MinimumSize.Width;
-            }
-            else
-            {
-                pnlLeft.Width = 200;
-            }
-            pnlLeftStatus = !pnlLeftStatus;
         }
 
         public void AddStatusBarItem(Control content)
@@ -71,6 +58,8 @@ namespace Win10Theme
         private void picBoxMenuButton_MouseDown(object sender, MouseEventArgs e)
         {
             picBoxMenuButton.Image = Properties.Resources.fa_bars_64_0_bbbbbb_none;
+            pnlLeftStatus = !pnlLeftStatus;
+            timerAnimation.Start();
         }
 
         private void picBoxMenuButton_MouseUp(object sender, MouseEventArgs e)
@@ -86,6 +75,24 @@ namespace Win10Theme
         private void picBoxMenuButton_MouseLeave(object sender, EventArgs e)
         {
             picBoxMenuButton.Image = Properties.Resources.fa_bars_64_0_ffffff_none;
+        }
+
+        private void timerAnimation_Tick(object sender, EventArgs e)
+        {
+            if (pnlLeftStatus)
+            {
+                if (pnlLeft.Width > pnlLeft.MinimumSize.Width)
+                    pnlLeft.Width -= pnlLeft.Width - 10 < pnlLeft.MinimumSize.Width ? pnlLeft.Width - pnlLeft.MinimumSize.Width : 10;
+                else
+                    timerAnimation.Stop();
+            }
+            else
+            {
+                if (pnlLeft.Width < 200)
+                    pnlLeft.Width += pnlLeft.Width + 10 > 200 ? 200 - pnlLeft.Width : 10;
+                else
+                    timerAnimation.Stop();
+            }
         }
     }
 }

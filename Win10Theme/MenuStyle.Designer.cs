@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlStatusBar = new System.Windows.Forms.Panel();
             this.picBoxMenuButton = new System.Windows.Forms.PictureBox();
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.flowPnlMenuItems = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.timerAnimation = new System.Windows.Forms.Timer(this.components);
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMenuButton)).BeginInit();
             this.pnlLeft.SuspendLayout();
@@ -69,7 +71,6 @@
             this.picBoxMenuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxMenuButton.TabIndex = 2;
             this.picBoxMenuButton.TabStop = false;
-            this.picBoxMenuButton.Click += new System.EventHandler(this.picBoxMenuButton_Click);
             this.picBoxMenuButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picBoxMenuButton_MouseDown);
             this.picBoxMenuButton.MouseEnter += new System.EventHandler(this.picBoxMenuButton_MouseEnter);
             this.picBoxMenuButton.MouseLeave += new System.EventHandler(this.picBoxMenuButton_MouseLeave);
@@ -102,6 +103,11 @@
             this.pnlContent.Size = new System.Drawing.Size(543, 502);
             this.pnlContent.TabIndex = 2;
             // 
+            // timerAnimation
+            // 
+            this.timerAnimation.Interval = 1;
+            this.timerAnimation.Tick += new System.EventHandler(this.timerAnimation_Tick);
+            // 
             // MenuStyle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,5 +132,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowPnlMenuItems;
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Panel pnlStatusBar;
+        private System.Windows.Forms.Timer timerAnimation;
     }
 }
