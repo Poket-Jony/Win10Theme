@@ -30,13 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.pnlTopContainer = new System.Windows.Forms.Panel();
             this.pnlStatusBar = new System.Windows.Forms.Panel();
+            this.lblMenuItemTitle = new System.Windows.Forms.Label();
             this.picBoxMenuButton = new System.Windows.Forms.PictureBox();
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.flowPnlMenuItems = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.timerAnimation = new System.Windows.Forms.Timer(this.components);
             this.pnlTop.SuspendLayout();
+            this.pnlTopContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMenuButton)).BeginInit();
             this.pnlLeft.SuspendLayout();
             this.SuspendLayout();
@@ -44,30 +47,59 @@
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.SlateGray;
-            this.pnlTop.Controls.Add(this.pnlStatusBar);
+            this.pnlTop.Controls.Add(this.pnlTopContainer);
             this.pnlTop.Controls.Add(this.picBoxMenuButton);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Padding = new System.Windows.Forms.Padding(5);
             this.pnlTop.Size = new System.Drawing.Size(578, 39);
             this.pnlTop.TabIndex = 0;
             // 
+            // pnlTopContainer
+            // 
+            this.pnlTopContainer.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTopContainer.Controls.Add(this.pnlStatusBar);
+            this.pnlTopContainer.Controls.Add(this.lblMenuItemTitle);
+            this.pnlTopContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTopContainer.Location = new System.Drawing.Point(37, 5);
+            this.pnlTopContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlTopContainer.Name = "pnlTopContainer";
+            this.pnlTopContainer.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.pnlTopContainer.Size = new System.Drawing.Size(536, 29);
+            this.pnlTopContainer.TabIndex = 3;
+            // 
             // pnlStatusBar
             // 
-            this.pnlStatusBar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlStatusBar.Location = new System.Drawing.Point(41, 5);
+            this.pnlStatusBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlStatusBar.Location = new System.Drawing.Point(20, 0);
+            this.pnlStatusBar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlStatusBar.Name = "pnlStatusBar";
-            this.pnlStatusBar.Size = new System.Drawing.Size(534, 30);
+            this.pnlStatusBar.Size = new System.Drawing.Size(516, 30);
             this.pnlStatusBar.TabIndex = 0;
+            // 
+            // lblMenuItemTitle
+            // 
+            this.lblMenuItemTitle.AutoSize = true;
+            this.lblMenuItemTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblMenuItemTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenuItemTitle.ForeColor = System.Drawing.Color.White;
+            this.lblMenuItemTitle.Location = new System.Drawing.Point(20, 0);
+            this.lblMenuItemTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.lblMenuItemTitle.Name = "lblMenuItemTitle";
+            this.lblMenuItemTitle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblMenuItemTitle.Size = new System.Drawing.Size(0, 25);
+            this.lblMenuItemTitle.TabIndex = 0;
             // 
             // picBoxMenuButton
             // 
+            this.picBoxMenuButton.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxMenuButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.picBoxMenuButton.Image = global::Win10Theme.Properties.Resources.fa_bars_64_0_ffffff_none;
-            this.picBoxMenuButton.Location = new System.Drawing.Point(3, 3);
+            this.picBoxMenuButton.Location = new System.Drawing.Point(5, 5);
+            this.picBoxMenuButton.Margin = new System.Windows.Forms.Padding(0);
             this.picBoxMenuButton.Name = "picBoxMenuButton";
-            this.picBoxMenuButton.Size = new System.Drawing.Size(32, 32);
+            this.picBoxMenuButton.Size = new System.Drawing.Size(32, 29);
             this.picBoxMenuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxMenuButton.TabIndex = 2;
             this.picBoxMenuButton.TabStop = false;
@@ -89,7 +121,9 @@
             // 
             // flowPnlMenuItems
             // 
+            this.flowPnlMenuItems.BackColor = System.Drawing.Color.Transparent;
             this.flowPnlMenuItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowPnlMenuItems.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowPnlMenuItems.Location = new System.Drawing.Point(0, 0);
             this.flowPnlMenuItems.Name = "flowPnlMenuItems";
             this.flowPnlMenuItems.Size = new System.Drawing.Size(35, 502);
@@ -118,6 +152,8 @@
             this.Name = "MenuStyle";
             this.Size = new System.Drawing.Size(578, 541);
             this.pnlTop.ResumeLayout(false);
+            this.pnlTopContainer.ResumeLayout(false);
+            this.pnlTopContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMenuButton)).EndInit();
             this.pnlLeft.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -133,5 +169,7 @@
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Panel pnlStatusBar;
         private System.Windows.Forms.Timer timerAnimation;
+        private System.Windows.Forms.Panel pnlTopContainer;
+        private System.Windows.Forms.Label lblMenuItemTitle;
     }
 }

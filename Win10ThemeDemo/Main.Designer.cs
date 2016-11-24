@@ -93,9 +93,12 @@
             // menuBar1
             // 
             this.menuBar1.Location = new System.Drawing.Point(315, 12);
+            this.menuBar1.MenuTitleColor = System.Drawing.Color.White;
             this.menuBar1.Name = "menuBar1";
+            this.menuBar1.SideColor = System.Drawing.Color.DimGray;
             this.menuBar1.Size = new System.Drawing.Size(473, 431);
             this.menuBar1.TabIndex = 0;
+            this.menuBar1.TopColor = System.Drawing.Color.SlateGray;
             // 
             // Main
             // 

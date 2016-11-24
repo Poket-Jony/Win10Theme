@@ -14,6 +14,42 @@ namespace Win10Theme
     {
         private bool pnlLeftStatus = true;
 
+        public Color TopColor
+        {
+            get
+            {
+                return pnlTop.BackColor;
+            }
+            set
+            {
+                pnlTop.BackColor = value;
+            }
+        }
+
+        public Color SideColor
+        {
+            get
+            {
+                return pnlLeft.BackColor;
+            }
+            set
+            {
+                pnlLeft.BackColor = value;
+            }
+        }
+
+        public Color MenuTitleColor
+        {
+            get
+            {
+                return lblMenuItemTitle.ForeColor;
+            }
+            set
+            {
+                lblMenuItemTitle.ForeColor = value;
+            }
+        }
+
         public MenuStyle()
         {
             InitializeComponent();
@@ -52,6 +88,7 @@ namespace Win10Theme
                 pnlContent.Controls.Add(item.Content);
                 item.Content.Dock = DockStyle.Fill;
             }
+            lblMenuItemTitle.Text = item.Label;
             item.IsSelected = true;
         }
 

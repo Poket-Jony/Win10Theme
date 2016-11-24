@@ -32,13 +32,15 @@ namespace Win10Theme
             }
         }
 
+        public string Label { get; set; }
+
         public Control Content { get; set; }
 
         public MenuItem(Image icon, string label, Control content)
         {
             InitializeComponent();
             picBoxIcon.Image = icon;
-            lblLabel.Text = label;
+            lblLabel.Text = this.Label = label;
             Content = content;
 
             foreach(Control c in GetAllControls())
